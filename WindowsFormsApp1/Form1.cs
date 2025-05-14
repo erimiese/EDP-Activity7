@@ -25,8 +25,11 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormViewData viewForm = new FormViewData();
-            viewForm.ShowDialog();
+            this.Hide(); // Hide Form1
+            UserForm userForm = new UserForm();
+            userForm.ShowDialog(); // Show UserForm
+
+            this.Show(); // Show Form1 again after UserForm is closed (if needed)           
         }
 
         private void button2_Click(object sender, EventArgs e)
